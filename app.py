@@ -15,5 +15,9 @@ def about():
 def health():
     return {"status": "ok"}
 
+@app.get("/version")
+def version():
+    return {"version": "0.1.0"}
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080, debug=False)
